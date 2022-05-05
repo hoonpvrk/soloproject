@@ -19,7 +19,7 @@ app.post('/', (req, res) => {
     console.log(foodSelector)
     console.log(foodSelector1)
     console.log(foodSelector2)
-    res.send('Post received')
+    res.status(200).json({pizza: 'yum'})
 })
 
 app.listen(3000)

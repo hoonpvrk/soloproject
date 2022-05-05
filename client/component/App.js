@@ -7,26 +7,23 @@ class App extends Component {
 
    render() {
     const clickHandler = (e) => {
-        const foodSelector = document.querySelector("#food").value
-        const foodSelector1 = document.querySelector("#food1").value
-        const foodSelector2 = document.querySelector("#food2").value
-        console.log(foodSelector)
-        console.log(foodSelector1)
-        console.log(foodSelector2)
-        
+        const clothesSelector = document.querySelector("#food").value
+        console.log(clothesSelector)
+
         fetch ('/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
         },
             body: JSON.stringify({
-                foodSelector: foodSelector,
-                foodSelector1: foodSelector1,
-                foodSelector2: foodSelector2,
+                clothesSelector: clothesSelector,
             }),
     })
     .then(data => {
-        
+        return data.json()
+    })
+    .then(res=> {
+        console.log(res)
     })
     .catch((err)=> {
         console.log('error')
