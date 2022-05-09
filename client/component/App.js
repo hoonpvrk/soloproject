@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
+import FoodItem from './foodSelection'
 
-
+function App (props) {
+    return (
+        <div>
+        <h1> Yooooooo </h1>
+        <FoodItem/>
+        </div>
+    )
+}
 
 
 
@@ -160,4 +168,4 @@ import React, { Component } from 'react';
 // // }
 
 
-// export default App;
+export default App;
